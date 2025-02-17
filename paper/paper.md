@@ -38,35 +38,27 @@ These features address the limitations of existing tools and provide researchers
 
 # Methods Implemented
 
-The distance correlation between $ \mathbf{X} $ and $ \mathbf{Y} $, denoted as $ R(\mathbf{X}, \mathbf{Y}) $, introduced by @Szekely2007, measures the dependence between two random vectors. Partial distance correlation, $ R(\mathbf{X}, \mathbf{Y}; \mathbf{Z}) $, introduced by @Szekely2014, measures the dependence between two random vectors $ \mathbf{X} $ and $ \mathbf{Y} $ after controlling for a third vector $ \mathbf{Z} $. There are two types of estimators for distance dependence: one based on @Szekely2007 and the other on @Szekely2013a. These are distinguished by an asterisk in the results and are denoted by $ R_n $ and $ R_n^* $, respectively.
+The distance correlation between $\mathbf{X}$ and $\mathbf{Y}$, denoted as $R(\mathbf{X}, \mathbf{Y})$, introduced by @Szekely2007, measures the dependence between two random vectors. Partial distance correlation, $R(\mathbf{X}, \mathbf{Y}; \mathbf{Z})$, introduced by @Szekely2014, measures the dependence between two random vectors $\mathbf{X}$ and $\mathbf{Y}$ after controlling for a third vector $\mathbf{Z}$. There are two types of estimators for distance dependence: one based on @Szekely2007 and the other on @Szekely2013a. These are distinguished by an asterisk in the results and are denoted by $R_n$ and $R_n^*$, respectively.
 
 The neighborhood dependence indices measure the dependence between observations and their spatial neighbors:
 
-$$
-SR_{\mathbf{n}}(\mathbf{k}) = R_n (\mathbf{Z(s,k),Z(s)}), \quad SR^*_n(\mathbf{k}) = R^*_{\mathbf{n}}(\mathbf{Z(s,k),Z(s)})
-$$
+$$SR_{\mathbf{n}}(\mathbf{k}) = R_n (\mathbf{Z(s,k),Z(s)}), \quad SR^*_n(\mathbf{k}) = R^*_{\mathbf{n}}(\mathbf{Z(s,k),Z(s)})$$
 
-where $ \mathbf{Z(s,k)} $ represents observations in the $ \mathbf{k} $-th neighborhood. To remove regional trends and isolate spatial dependence, we define de-trended indices:
+where $\mathbf{Z(s,k)}$ represents observations in the $\mathbf{k}$-th neighborhood. To remove regional trends and isolate spatial dependence, we define de-trended indices:
 
-$$
-DR_{\mathbf{n}}(\mathbf{k}) = R_n(\mathbf{Z(s,k),Z(s)};  g\mathbf{(s)}), \quad DR^*_{\mathbf{n}}(\mathbf{k}) = R^*_n(\mathbf{Z(s,k),Z(s)}; g\mathbf{(s)})
-$$
+$$DR_{\mathbf{n}}(\mathbf{k}) = R_n(\mathbf{Z(s,k),Z(s)};  g\mathbf{(s)}), \quad DR^*_{\mathbf{n}}(\mathbf{k}) = R^*_n(\mathbf{Z(s,k),Z(s)}; g\mathbf{(s)})$$
 
-where $ g\mathbf{(s)} $ represents a trend function. The contribution of regional trends to dependence is measured using trend indices:
+where $g\mathbf{(s)}$ represents a trend function. The contribution of regional trends to dependence is measured using trend indices:
 
-$$
-TR_{\mathbf{n}}(\mathbf{k}) = 1 - DR_{\mathbf{n}}(\mathbf{k}), \quad TR^*_{\mathbf{n}}(\mathbf{k}) = 1 - DR^*_{\mathbf{n}}(\mathbf{k}).
-$$
+$$TR_{\mathbf{n}}(\mathbf{k}) = 1 - DR_{\mathbf{n}}(\mathbf{k}), \quad TR^*_{\mathbf{n}}(\mathbf{k}) = 1 - DR^*_{\mathbf{n}}(\mathbf{k}).$$
 
-To assess dependence influenced by external factors, regional dependence indices incorporate regional variables $ \mathbf{Y(s)} $:
+To assess dependence influenced by external factors, regional dependence indices incorporate regional variables $\mathbf{Y(s)}$:
 
-$$
-RR_{\mathbf{n}} = R_n(\mathbf{Z(s), Y(s)}), \quad RR^*_{\mathbf{n}} = R^*_n(\mathbf{Z(s), Y(s)}).
-$$
+$$RR_{\mathbf{n}} = R_n(\mathbf{Z(s), Y(s)}), \quad RR^*_{\mathbf{n}} = R^*_n(\mathbf{Z(s), Y(s)}).$$
 
-Aggregated measures over multiple neighborhoods are calculated by averaging the spatial dependence values of specific measures across $ m $ neighborhoods. Specifically, $ NDC(m) $ and $ NDC^*(m) $ represent the averages of the spatial dependence values $ SR_{\mathbf{n}}(\mathbf{k}) $ and $ SR^*_{\mathbf{n}}(\mathbf{k}) $ for $ m $ neighborhoods, respectively. Similarly, $ NWR(m) $ and $ NWR^*(m) $ are the averages of $ DR_{\mathbf{n}}(\mathbf{k}) $ and $ DR^*_{\mathbf{n}}(\mathbf{k} $, while $ NRD(m) $ and $ NRD^*(m) $ are the averages of $ TR_{\mathbf{n}}(\mathbf{k}) $ and $ TR^*_{\mathbf{n}}(\mathbf{k} $). These indices offer a comprehensive approach to evaluating spatial dependence in multivariate data.
+Aggregated measures over multiple neighborhoods are calculated by averaging the spatial dependence values of specific measures across $m$ neighborhoods. Specifically, $NDC(m)$ and $NDC^*(m)$ represent the averages of the spatial dependence values $SR_{\mathbf{n}}(\mathbf{k})$ and $SR^*_{\mathbf{n}}(\mathbf{k})$ for $m$ neighborhoods, respectively. Similarly, $NWR(m)$ and $NWR^*(m)$ are the averages of $DR_{\mathbf{n}}(\mathbf{k})$ and $DR^*_{\mathbf{n}}(\mathbf{k})$, while $NRD(m)$ and $NRD^*(m)$ are the averages of $TR_{\mathbf{n}}(\mathbf{k})$ and $TR^*_{\mathbf{n}}(\mathbf{k})$. These indices offer a comprehensive approach to evaluating spatial dependence in multivariate data.
 
-Using the approach of @Fokianos2017, the test statistics $ SP $, $ SP^* $, $ DP $, $ DP^* $, $ TP $, $ TP^* $, $ RR $, and $ RR^* $ are formulated as weighted sums of spatial dependence measures across multiple neighborhoods. These statistics incorporate kernel-based weighting functions to enhance sensitivity to spatial patterns. The formulation involves aggregating dependence measures over a set of indices determined by the sample structure, where the weighting is controlled by a kernel function. Several common kernel functions, such as "Truncated", "Bartlett", "Daniell", and "Parzen", can be employed to adjust the influence of different neighborhood scales (@Hong1999).
+Using the approach of @Fokianos2017, the test statistics $SP$, $SP^*$, $DP$, $DP^*$, $TP$, $TP^*$, $RR$, and $RR^*$ are formulated as weighted sums of spatial dependence measures across multiple neighborhoods. These statistics incorporate kernel-based weighting functions to enhance sensitivity to spatial patterns. The formulation involves aggregating dependence measures over a set of indices determined by the sample structure, where the weighting is controlled by a kernel function. Several common kernel functions, such as "Truncated", "Bartlett", "Daniell", and "Parzen", can be employed to adjust the influence of different neighborhood scales (@Hong1999).
 
 The bootstrap procedure estimates the test statistic's distribution by permuting the original dataset, resampling, and computing P-values, and it is used for spatial dependence testing.
 
@@ -75,18 +67,18 @@ The bootstrap procedure estimates the test statistic's distribution by permuting
 1. **Data Import and Editing**: SDD supports multiple data formats, including text files (.txt, .csv), SAS (.sas7bdat), STATA (.dta), SPSS (.sav, .zsav, .por), and Excel (.xls, .xlsx). Users can easily import, edit, filter, and export data within the software.
 
 2. **Spatial Dependence Tests**: SDD implements several tests for spatial dependence, including:
-   - $ SP $ and $ SP^* $: Tests for spatial dependence, trends, or both.
-   - $ DP $ and $ DP^* $: Tests for spatial dependence.
-   - $ TP $ and $ TP^* $: Tests for trends (non-stationarity).
-   - $ RR $ and $ RR^* $: Tests for region-specific dependence based on regional variables.
+   - $SP$ and $SP^*$: Tests for spatial dependence, trends, or both.
+   - $DP$ and $DP^*$: Tests for spatial dependence.
+   - $TP$ and $TP^*$: Tests for trends (non-stationarity).
+   - $RR$ and $RR^*$: Tests for region-specific dependence based on regional variables.
 
-   If the P-value is less than the alpha level, the null hypothesis is rejected, indicating the presence of the respective spatial dependence or trend ($ SP $ and $ SP^* $), spatial dependence ($ DP $ and $ DP^* $), trend ($ TP $ and $ TP^* $), and region-specific dependence ($ RR $ and $ RR^* $).
+   If the P-value is less than the alpha level, the null hypothesis is rejected, indicating the presence of the respective spatial dependence or trend ($SP$ and $SP^*$), spatial dependence ($DP$ and $DP^*$), trend ($TP$ and $TP^*$), and region-specific dependence ($RR$ and $RR^*$).
 
 3. **Bootstrap Procedure**: The software includes a bootstrap method for conducting dependence tests. Users can set parameters such as the number of replications (B) and a seed value to ensure reproducibility.
 
 4. **Kernel Functions**: Users can specify different kernel functions for the tests, including: Truncated, Bartlett, Daniell, Parzen.
 
-5. **NDC/NWR/NRD Parameters**: SDD allows users to specify the parameter $ m $ for neighborhood distance correlation (NDC), neighborhood distance correlation without region dependence (NWR), and neighborhood region dependence (NRD).
+5. **NDC/NWR/NRD Parameters**: SDD allows users to specify the parameter $m$ for neighborhood distance correlation (NDC), neighborhood distance correlation without region dependence (NWR), and neighborhood region dependence (NRD).
 
 6. **Results and Reporting**: The results of the tests are displayed in the main panel of the software. Users can save the results in text or Microsoft Word format for further analysis and reporting.
 
@@ -96,11 +88,11 @@ The article provides a practical example using the Meuse River dataset, which in
 
 ## Results of Spatial Dependence Tests
 
-The tests $ SD^* $ and $ SD $ reject $ H_0 $ with a P-value of 0.000. The indices $ NDC^* $ and $ NDC $ were found to be 0.299 and 0.319, respectively. To determine whether this rejection was due to dependence or a trend in the data, we applied the $ DP^* $ and $ DP $ tests. Based on a first-degree polynomial function, these tests confirmed spatial dependence in heavy metal distribution (P-value = 0.000). The dependence indices $ NWR^* $ and $ NWR $ were 0.299 and 0.318, respectively. However, the $ TP^* $ and $ TP $ tests indicated stationarity in the region, as their P-values equaled 1.000.
+The tests $SD^*$ and $SD$ reject $H_0$ with a P-value of 0.000. The indices $NDC^*$ and $NDC$ were found to be 0.299 and 0.319, respectively. To determine whether this rejection was due to dependence or a trend in the data, we applied the $DP^*$ and $DP$ tests. Based on a first-degree polynomial function, these tests confirmed spatial dependence in heavy metal distribution (P-value = 0.000). The dependence indices $NWR^*$ and $NWR$ were 0.299 and 0.318, respectively. However, the $TP^*$ and $TP$ tests indicated stationarity in the region, as their P-values equaled 1.000.
 
-Heavy metal distribution appears influenced by sediment transport and deposition patterns, especially in low-elevation areas near the riverbank. The $ RR^* $ and $ RR $ tests confirmed strong regional dependence, with values of 0.586 and 0.590, and a significant P-value of 0.000, suggesting an association with elevation and river proximity.
+Heavy metal distribution appears influenced by sediment transport and deposition patterns, especially in low-elevation areas near the riverbank. The $RR^*$ and $RR$ tests confirmed strong regional dependence, with values of 0.586 and 0.590, and a significant P-value of 0.000, suggesting an association with elevation and river proximity.
 
-We hypothesize that flooding frequency affects spatial dependence. When incorporating this classification, the regional dependence assessment indicated an increase in $ SD^* $, $ SD $, $ DP^* $, and $ DP $ values, reaching 0.515, 0.527, 0.514, and 0.527, respectively. Notably, this classification revealed a trend in the data, as detected by the $ TP^* $ and $ TP $ tests.
+We hypothesize that flooding frequency affects spatial dependence. When incorporating this classification, the regional dependence assessment indicated an increase in $SD^*$, $SD$, $DP^*$, and $DP$ values, reaching 0.515, 0.527, 0.514, and 0.527, respectively. Notably, this classification revealed a trend in the data, as detected by the $TP^*$ and $TP$ tests.
 
 # Availability
 
@@ -111,21 +103,3 @@ The SDD software is available on StatisSoft at [https://statisme.com/Home/Statis
 SDD is a powerful and user-friendly tool for measuring and testing spatial dependence in multivariate spatial data. It implements robust methods based on distance correlation and offers a comprehensive set of features for data analysis and reporting. The software is particularly useful for researchers working with high-dimensional spatial data.
 
 # References
-
-- @Andreano2019
-- @Anselin2001
-- @Burrough2015
-- @deGraaff2001
-- @Edelmann2019
-- @Fokianos2017
-- @Geary1954
-- @Hong1999
-- @Kelejian2007
-- @Lopez2010
-- @Moran1950
-- @Szekely2007
-- @Szekely2009
-- @Szekely2013a
-- @Szekely2014
-- @Szekely2023
-- @Zhou2012
