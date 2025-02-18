@@ -82,6 +82,39 @@ The bootstrap procedure estimates the test statistic's distribution by permuting
 
 6. **Results and Reporting**: The results of the tests are displayed in the main panel of the software. Users can save the results in text or Microsoft Word format for further analysis and reporting.
 
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="SDD1.jpg" width="300" height="300">
+      <br>
+      <b> (a) </b> Edit Data
+    </td>
+    <td align="center">
+      <img src="SDD2.jpg" width="300" height="300">
+      <br>
+      <b> (b) </b> Spatial Dependence window
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="SDD4.jpg" width="300" height="300">
+      <br>
+      <b> (c) </b> Select variables
+    </td>
+    <td align="center">
+      <img src="SDD3.jpg" width="300" height="300">
+      <br>
+      <b> (d) </b> Main panel
+    </td>
+  </tr>
+</table>
+
+**Figure 1:** SDD Software
+
+</div>
+  
 # Practical Example: Meuse River Data
 
 The article provides a practical example using the Meuse River dataset, which includes measurements of heavy metals (Cu, Cd, Pb, Zn) along with their spatial locations and covariates. The dataset is available in the `sp` package of R. The method for selecting variables and its output are presented in the figures.
