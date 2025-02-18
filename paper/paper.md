@@ -64,9 +64,9 @@ The bootstrap procedure estimates the test statistic's distribution by permuting
 
 # Key Features
 
-1. **Data Import and Editing**: SDD supports multiple data formats, including text files (.txt, .csv), SAS (.sas7bdat), STATA (.dta), SPSS (.sav, .zsav, .por), and Excel (.xls, .xlsx). Users can easily import, edit, filter, and export data within the software.
+1. **Data Import and Editing**: SDD supports multiple data formats, including text files (.txt, .csv), SAS (.sas7bdat), STATA (.dta), SPSS (.sav, .zsav, .por), and Excel (.xls, .xlsx). Users can easily import, edit, filter, and export data within the software(see ‎Figure ‎‎1a)‎.
 
-2. **Spatial Dependence Tests**: SDD implements several tests for spatial dependence, including:
+2. **Spatial Dependence Tests**: SDD implements several tests for spatial dependence, including(see ‎Figure ‎‎1b):
    - $SP$ and $SP^\*$: Tests for spatial dependence, trends, or both.
    - $DP$ and $DP^\*$: Tests for spatial dependence.
    - $TP$ and $TP^\*$: Tests for trends (non-stationarity).
@@ -80,7 +80,7 @@ The bootstrap procedure estimates the test statistic's distribution by permuting
 
 5. **NDC/NWR/NRD Parameters**: SDD allows users to specify the parameter $m$ for neighborhood distance correlation (NDC), neighborhood distance correlation without region dependence (NWR), and neighborhood region dependence (NRD).
 
-6. **Results and Reporting**: The results of the tests are displayed in the main panel of the software. Users can save the results in text or Microsoft Word format for further analysis and reporting.
+6. **Results and Reporting**: The results of the tests are displayed in the main panel of the software. Users can save the results in text or Microsoft Word format for further analysis and reporting(see ‎Figure ‎‎1d).
 
 
 <div align="center">
@@ -117,7 +117,7 @@ The bootstrap procedure estimates the test statistic's distribution by permuting
   
 # Practical Example: Meuse River Data
 
-The article provides a practical example using the Meuse River dataset, which includes measurements of heavy metals (Cu, Cd, Pb, Zn) along with their spatial locations and covariates. The dataset is available in the `sp` package of R. The method for selecting variables and its output are presented in the figures.
+The article provides a practical example using the Meuse River dataset, which includes measurements of heavy metals (Cu, Cd, Pb, Zn) along with their spatial locations and covariates. The dataset is available in the `sp` package of R. The method for selecting variables and its output are presented in Figures 1c and 1d.
 
 ## Results of Spatial Dependence Tests
 
