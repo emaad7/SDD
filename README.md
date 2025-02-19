@@ -13,6 +13,7 @@ SDD is an open-source software tool developed in R, featuring an independent gra
     </tr>
   </table>
 </div>
+
 # Installation
 
 To install the **SDD** software, follow these steps:
@@ -20,7 +21,7 @@ To install the **SDD** software, follow these steps:
 1. First, download the setup file from the link below:  
    [Download SDD2024.exe](https://statisme.com/Content/softs/SDD2024.exe)
 
-2. After downloading, you can refer to the attached guide file available on [Installation Guide for SDD Software]([Installation Guide for SDD Software](https://github.com/emaad7/SDD/blob/main/Installation%20Guide%20for%20SDD%20Software.pdf)) for detailed installation instructions. This file contains the complete installation steps and troubleshooting tips.
+2. After downloading, you can refer to the attached guide file available on https://github.com/emaad7/SDD/blob/main/Installation%20Guide%20for%20SDD%20Software.pdf for detailed installation instructions. This file contains the complete installation steps and troubleshooting tips.
 
 3. Run the `SDD2024.exe` file and follow the installation wizard. If you encounter any security warnings (such as from Microsoft Defender SmartScreen), you can proceed by clicking "More info" and then "Run anyway."
 
