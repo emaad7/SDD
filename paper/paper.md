@@ -129,8 +129,7 @@ We hypothesize that flooding frequency affects spatial dependence. When incorpor
 
 # Availability
 
-The SDD software is available on [StatisSoft](https://statisme.com/Home/StatisSoftList) and [GitHub](https://github.com/emaad7/SDD). These websites provide access to the software, its manual, and the data used in the article.
-
+The SDD software is available on [StatisSoft](https://statisme.com/Home/StatisSoftList), which provides access to the software, its manual, and the data used in the article.
 # Conclusion
 
 SDD is a powerful and user-friendly tool for measuring and testing spatial dependence in multivariate spatial data. It implements robust methods based on distance correlation and offers a comprehensive set of features for data analysis and reporting. The software is particularly useful for researchers working with high-dimensional spatial data.
