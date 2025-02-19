@@ -5,10 +5,10 @@ SDD is an open-source software tool developed in R, featuring an independent gra
   <table cellpadding="10" cellspacing="0" style="border: 2px solid lightgray; border-collapse: collapse;">
     <tr>
       <td align="center" style="border: 1px solid lightgray;">
-        <img src="paper/SDD2.jpg" width="300" height="300">
+        <img src="paper/SDD3.jpg" width="300" height="300">
       </td>
       <td align="center" style="border: 1px solid lightgray;">
-        <img src="paper/SDD3.jpg" width="300" height="300">
+        <img src="paper/SDD2.jpg" width="300" height="300">
       </td>
     </tr>
   </table>
